@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Roulette</title>
+  <meta name="description" content="Responsive, Bootstrap, BS4" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/ionicons/css/ionicons.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+
+  <!-- build:css css/styles/app.min.css -->
+  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+
+<!-- ############ LAYOUT START-->
+
+  <!-- aside -->
+  <div id="aside" class="app-aside fade nav-dropdown black">
+    <!-- fluid app aside -->
+    <div class="navside dk" data-layout="column" style="max-width: 200px;">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="index.html" class="navbar-brand">
+        	<div data-ui-include="'images/logo.svg'"></div>
+        	<img src="images/logo.png" alt="." class="hide">
+        	<span class="hidden-folded inline">CSGOJACKPOT</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <div data-flex class="hide-scroll">
+          <nav class="scroll nav-stacked nav-stacked-rounded nav-color">
+            
+            <ul class="nav" data-ui-nav>
+              <li class="nav-header hidden-folded">
+                <span class="text-xs">Main</span>
+              </li>
+              <li>
+                <a href="index.html" class="b-default">
+                  <span class="nav-icon">
+                    <i class="ion-filing"></i>
+                  </span>
+                  <span class="nav-text">Roulette</span>
+                </a>
+              </li>
+              <li>
+                <a href="gallery.html" class="b-default">
+                  <span class="nav-icon">
+                    <i class="ion-android-apps"></i>
+                  </span>
+                  <span class="nav-text">Deposit</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="b-default">
+                  <span class="nav-icon">
+                    <i class="ion-email"></i>
+                  </span>
+                  <span class="nav-text">Withdraw</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="b-default">
+                  <span class="nav-icon">
+                    <i class="ion-chatbubble-working"></i>
+                  </span>
+                  <span class="nav-text">Free coins</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="b-default">
+                  <span class="nav-icon">
+                    <i class="ion-information-circled"></i>
+                  </span>
+                  <span class="nav-text">FAQ</span>
+                </a>
+              </li>
+            
+            
+             
+            </ul>
+          </nav>
+      </div>
+      <div data-flex-no-shrink>
+        <div class="nav-fold dropup">
+          <a data-toggle="dropdown">
+              <div class="clear hidden-folded p-x">
+                <span class="block _500 text-muted">Silver I</span>
+                <div class="progress-xxs m-y-sm lt progress">
+                    <div class="progress-bar info" style="width: 65%;">
+                    </div>
+                </div>
+              </div>
+          </a>
+          <div class="dropdown-menu w dropdown-menu-scale ">
+            <a class="dropdown-item" href="profile.html">
+              <span>Profile</span>
+            </a>
+            <a class="dropdown-item" href="setting.html">
+              <span>Settings</span>
+            </a>
+            <a class="dropdown-item" href="app.inbox.html">
+              <span>Inbox</span>
+            </a>
+            <a class="dropdown-item" href="app.message.html">
+              <span>Message</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="docs.html">
+              Need help?
+            </a>
+            <a class="dropdown-item" href="signin.html">Sign out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / -->
+  
+  <!-- content -->
+  <div id="content" class="app-content box-shadow-z2 bg pjax-container" role="main">
+    <div class="app-header white bg b-b">
+          <div class="navbar" data-pjax>
+                <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
+                  <i class="ion-navicon"></i>
+                </a>
+                <div class="navbar-item pull-left h5" id="pageTitle">Withdraw</div>
+                <!-- nabar right -->
+                <ul class="nav navbar-nav pull-right">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link clear" data-toggle="dropdown">
+                      <span class="avatar w-32">
+                        <img src="images/a3.jpg" class="w-full rounded" alt="...">
+                      </span>
+                    </a>
+                    <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                      <a class="dropdown-item" href="profile.html">
+                        <span>Profile</span>
+                      </a>
+                      <a class="dropdown-item" href="setting.html">
+                        <span>Settings</span>
+                      </a>
+                      <a class="dropdown-item" href="app.inbox.html">
+                        <span>Inbox</span>
+                      </a>
+                      <a class="dropdown-item" href="app.message.html">
+                        <span>Message</span>
+                      </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="docs.html">
+                        Need help?
+                      </a>
+                      <a class="dropdown-item" href="signin.html">Sign out</a>
+
+      <div class="switcher dark-white active" id="sw-theme" style="position: initial; background-color: rgba(0, 0, 0, 0); border-bottom:0;">
+        <div class="box-body">
+          <p id="settingLayout">
+            <label class="md-check m-y-xs hidden-md-down" data-target="folded">
+              <input type="checkbox">
+              <i></i>
+              <span>Folded Aside</span>
+            </label>
+            <label class="m-y-xs pointer" data-ui-fullscreen data-target="fullscreen">
+              <span class="fa fa-expand fa-fw m-r-xs"></span>
+              <span>Fullscreen Mode</span>
+            </label>
+          </p>
+          <p>Themes:</p>
+          <div data-target="bg" class="clearfix">
+            <label class="radio radio-inline m-a-0 ui-check ui-check-lg">
+              <input type="radio" name="theme" value="">
+              <i class="light"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="grey">
+              <i class="grey"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="dark">
+              <i class="dark"></i>
+            </label>
+            <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-lg">
+              <input type="radio" name="theme" value="black">
+              <i class="black"></i>
+            </label>
+          </div>
+        </div>
+      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- / navbar right -->
+          </div>
+    </div>
+    <button class="btn white active info btn-xs" data-toggle="modal" data-target="#user" data-ui-toggle-class="modal-open-aside" data-ui-target="body" style="width: 200px; position: fixed; bottom: 10px; right: 10px; z-index: 200;">Chat</button>
+
+    <div class="app-body">
+
+<!-- ############ PAGE START-->
+<!-- only need a height for layout 4 -->
+<div style="min-height: 200px; padding: 1rem;">
+  <div class="col-sm-12">
+          <div class="b-b b-info nav-active-info">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" data-toggle="tab" data-target="#tab4" aria-expanded="true">All</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-target="#tab5" aria-expanded="false">Your choose</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content p-t-md m-b-md">
+            <div class="tab-pane animated fadeIn text-muted active" id="tab4" aria-expanded="true">
+
+  <div class="col-md-12">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" disabled > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing </div>
+                </div>
+                <small class="p-a-xs text-success" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Factory-New</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" disabled > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-primary" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Field-Tested</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <small class="p-a-xs text-warning" style="position: absolute; bottom: 27px; left: 0; display: block; text-align: center; width: 100%;">StatTrack</small>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" disabled > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-warn" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Minmal-Wear</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <small class="p-a-xs text-warning" style="position: absolute; bottom: 27px; left: 0; display: block; text-align: center; width: 100%;">StatTrack</small>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" data-ui-toggle-class > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-danger" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Battle-Scarred</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <small class="p-a-xs text-warning" style="position: absolute; bottom: 27px; left: 0; display: block; text-align: center; width: 100%;">StatTrack</small>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" data-ui-toggle-class > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-warn" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Minmal-Wear</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" data-ui-toggle-class > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-primary" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Field-Tested</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <small class="p-a-xs text-warning" style="position: absolute; bottom: 27px; left: 0; display: block; text-align: center; width: 100%;">StatTrack</small>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" data-ui-toggle-class > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-danger" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Battle-Scarred</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" data-ui-toggle-class > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-primary" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Field-Tested</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 col-xl-2" >
+              <div class="box md-btn" href="#" style="display:block" data-ui-toggle-class > <i class="fa fa-check text-success none"  style="position: absolute; top: 35px; right: 10px;"></i>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">M4A4 | DragonKing sdfvdv sdv sdf</div>
+                </div>
+                <small class="p-a-xs text-success" style="position: absolute; left: 0; display: block; text-align: center; width: 100%;">Factory-New</small>
+                <div style="width: 100%; height: 0.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+                <img src="http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV09-5lpKKqPrxN7LEm1Rd6dd2j6eQ9N2t2wK3-ENsZ23wcIKRdQE2NwyD_FK_kLq9gJDu7p_KyyRr7nNw-z-DyIFJbNUz/360fx360f" style="height: 139px;">
+                 
+                  <div style="width: 100%; height: 1.5px; background: linear-gradient(90deg, rgba(0, 0, 0, 0)  0%, #67db1f 50%, rgba(0, 0, 0, 0) 100%);"></div>
+               
+                <small class="p-a-xs text-warning" style="position: absolute; bottom: 27px; left: 0; display: block; text-align: center; width: 100%;">StatTrack</small>
+                <div class="p-a-xs">
+                  <div class="text-ellipsis text-xs">2300 <i class="material-icons text-info text-xs">stars</i></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+            </div>
+            <div class="tab-pane animated fadeIn text-muted" id="tab5" aria-expanded="false">
+              
+            <div class="col-xs-6 col-sm-3 col-md-2">
+              <div class="box p-a-xs">
+                <a href="#"><img src="images/a2.jpg">
+                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, #2cb5e8  0%, #67db1f 50%, #2cb5e8 100%);"></div>
+                </a>
+                <div class="p-a-sm">
+                  <div class="text-ellipsis">Vestibulum ullamcorper sodales nisi</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-2">
+              <div class="box p-a-xs">
+                <a href="#"><img src="images/a4.jpg">
+                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, #2cb5e8  0%, #67db1f 50%, #2cb5e8 100%);"></div>
+                </a>
+                <div class="p-a-sm">
+                  <div class="text-ellipsis">Donec eleifend condimentum nisl eu consectetur.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2">
+              <div class="box p-a-xs">
+                <a href="#"><img src="images/a6.jpg">
+                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, #2cb5e8  0%, #67db1f 50%, #2cb5e8 100%);"></div>
+                </a>
+                <div class="p-a-sm">
+                  <div class="text-ellipsis">Mauris convallis mauris at pellentesque</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2">
+              <div class="box p-a-xs">
+                <a href="#"><img src="images/a9.jpg">
+                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, #2cb5e8  0%, #67db1f 50%, #2cb5e8 100%);"></div>
+                </a>
+                <div class="p-a-sm">
+                  <div class="text-ellipsis">Dapibus porta</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2">
+              <div class="box p-a-xs">
+                <a href="#"><img src="images/a4.jpg">
+                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, #2cb5e8  0%, #67db1f 50%, #2cb5e8 100%);"></div>
+                </a>
+                <div class="p-a-sm">
+                  <div class="text-ellipsis">Donec eleifend condimentum nisl eu consectetur.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-2">
+              <div class="box p-a-xs">
+                <a href="#"><img src="images/a9.jpg">
+                <div style="width: 100%; height: 1px; background: linear-gradient(90deg, #2cb5e8  0%, #67db1f 50%, #2cb5e8 100%);"></div>
+                </a>
+                <div class="p-a-sm">
+                  <div class="text-ellipsis">Dapibus porta</div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+<!-- ############ PAGE END-->
+
+    </div>
+  </div>
+  <!-- / -->
+
+  
+  <!-- ############ SWITHCHER START-->
+  <!-- ############ SWITHCHER END-->
+<div class="modal fade inactive" id="user" data-backdrop="false" style="display: none;" aria-hidden="true">
+  <div class="modal-right w-xl white b-l">
+      <div class="row-col">
+        <a data-dismiss="modal" class="pull-right text-muted text-lg p-a-sm m-r-sm">×</a>
+        <div class="p-a b-b">
+          <span class="h5">Chat</span>
+        </div>
+        <div class="row-row">
+          <div class="row-body">
+            <div class="row-inner">
+              <div class="list-group no-radius no-borders">
+                <div class="box blue m-b-0">
+                  <div class="box-header ">
+                    <h3>Admin statement</h3>
+                    <small>Sub title goes here with small font</small>
+                  </div>
+                  <div class="box-body b-t">
+                    <p class="m-a-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam-a-0 m-b-smitudin egestas dui nec, fermentum diam. Vivamus vel tincidunt libero, vitae elementu</p>
+                  </div>
+                </div>
+                <a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-x-md">
+                    <i class="fa fa-circle text-success text-xs m-r-xs"></i>
+                    <small >Jonathan Mor..: </small><span>hello</span>
+                </a>
+                <a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-x-md">
+                    <i class="fa fa-circle text-success text-xs m-r-xs"></i>
+                    <small >Jacob_numbe..: </small><span>Hi!</span>
+                </a>
+                <a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-x-md">
+                    <i class="fa fa-circle text-danger text-xs m-r-xs"></i>
+                    <small >Admin: </small><span>Shut up!</span>
+                </a>
+                <a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-x-md">
+                    <i class="fa fa-circle text-info text-xs m-r-xs"></i>
+                    <small >Moderator: </small><span>Why?</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-a b-t">
+          <a href="#" class="text-muted"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+          <a href="#" class="text-muted m-h"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ############ LAYOUT END-->
+  </div>
+
+<!-- build:js scripts/app.min.js -->
+<!-- jQuery -->
+  <script src="libs/jquery/dist/jquery.js"></script>
+<!-- Bootstrap -->
+  <script src="libs/tether/dist/js/tether.min.js"></script>
+  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="libs/PACE/pace.min.js"></script>
+  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+  <script src="libs/blockUI/jquery.blockUI.js"></script>
+  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-modal.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-list.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="scripts/ui-taburl.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/ajax.js"></script>
+<!-- endbuild -->
+</body>
+</html>
